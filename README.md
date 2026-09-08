@@ -15,22 +15,22 @@
 
 
 <p align="center">
-  <img alt="更新频率" src="https://img.shields.io/badge/%E6%9B%B4%E6%96%B0%E9%A2%91%E7%8E%87-%E6%AF%8F%E5%91%A8-22C55E?style=flat-square&labelColor=14532D" />
-  <img alt="Awesome" src="https://img.shields.io/badge/Awesome-Curated-2563EB?style=flat-square&labelColor=1E3A8A" />
-  <img alt="PRs Welcome" src="https://img.shields.io/badge/PRs-Welcome-64748B?style=flat-square&labelColor=334155" />
-  <img alt="Last Commit: 9.4" src="https://img.shields.io/badge/Last%20Commit-9.4-3B82F6?style=flat-square&labelColor=374151" />
+  <img alt="Last Commit: 9.8" src="https://img.shields.io/badge/Last%20Commit-9.8-3B82F6?style=flat-square&labelColor=374151" />
 </p>
 
 <p align="center">
-  <img alt="更新论文" src="https://img.shields.io/badge/%E6%9B%B4%E6%96%B0%E8%AE%BA%E6%96%87-%2B20-8B5CF6?style=flat-square&labelColor=5B21B6" />
-  <img alt="更新数据集" src="https://img.shields.io/badge/%E6%9B%B4%E6%96%B0%E6%95%B0%E6%8D%AE%E9%9B%86-%2B10-F59E0B?style=flat-square&labelColor=92400E" />
-  <img alt="更新工具" src="https://img.shields.io/badge/%E6%9B%B4%E6%96%B0%E5%B7%A5%E5%85%B7-%2B2-14B8A6?style=flat-square&labelColor=0F766E" />
+  <img alt="更新论文" src="https://img.shields.io/badge/%E6%9B%B4%E6%96%B0%E8%AE%BA%E6%96%87-%2B10-8B5CF6?style=flat-square&labelColor=5B21B6" />
+  <img alt="更新数据集" src="https://img.shields.io/badge/%E6%9B%B4%E6%96%B0%E6%95%B0%E6%8D%AE%E9%9B%86-%2B5-F59E0B?style=flat-square&labelColor=92400E" />
+  <img alt="更新工具" src="https://img.shields.io/badge/%E6%9B%B4%E6%96%B0%E5%B7%A5%E5%85%B7-%2B1-14B8A6?style=flat-square&labelColor=0F766E" />
 </p>
 
 <p align="center">
-  <strong>本周更新（20260904）：</strong>两轮论文、数据集扩充与工具详解上线
+  <strong>本周更新（20260908）：</strong>论文、数据集扩充与 ManiSkill3 工具详解上线
 </p>
 
+<p align="center">
+  论文页新增 10 篇 2026 年 8 月发布论文的结构化条目（τ0-VLA、Riemann-1.0、AnyWorld、VLAct、UCAG-P、Gripper-aware VLA、SleepWalking、CrossTracer、GAUGE、StellaVLA），覆盖世界动作模型、VLA 测试时计算、跨本体导航与物理保真评测等方向，当前收录 417 篇；数据集页新增 5 个数据集（ABC-130K、TableVerse-100K、DexCanvas、Humanoid Everyday、VTDexManip），累计 51 个，覆盖双臂遥操作、Real2Sim 桌面生成、人手接触力与人形整机操作；工具页新增 ManiSkill3 论文式详解条目（GPU 并行仿真与评测平台）。
+</p>
 <p align="center">
   本周分两轮更新：论文页累计新增 20 篇结构化条目（Gemini Robotics、CogACT、DexVLA、UP-VLA、WorldVLA、3D-VLA、RoboDual、ForceVLA、Moto、DayDreamer、SmolVLA、MimicPlay、RoboPoint、Knowledge Insulating、TinyVLA、VPP、GR-1、GR-2、EgoMimic、RoboGen），当前收录 407 篇；数据集页累计新增 10 个（DexYCB、OakInk、GraspNet-1Billion、HOI4D、ARCTIC、GigaHands、EgoDex、DexCap、HumanPlus、LeRobot Community），当前 46 个；工具页 Genesis 与 LeRobot 升级为论文式详解条目（含使用场景与案例）。
 </p>
@@ -91,7 +91,7 @@ Beyond the 7th Day, explore the Infinite Embodiment.
 
 ### 🔭（2）瞭望台：追踪前沿技术
 
-> 当前收录 `21` 项竞赛、`10` 场会议、`407` 篇精选论文。
+> 当前收录 `21` 项竞赛、`10` 场会议、`417` 篇精选论文。
 
 查看[学术与竞赛](topics/05-research-hub.md)：
 
@@ -114,7 +114,7 @@ Beyond the 7th Day, explore the Infinite Embodiment.
 
 ### 🔧（3）锤炼：整合工程实践
 
-> 当前收录 `158` 个工具与开源项目。
+> 当前收录 `159` 个工具与开源项目。
 
 查看[工具与开源项目](topics/04-tools.md)：
 

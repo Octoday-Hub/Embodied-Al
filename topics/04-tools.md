@@ -12,6 +12,25 @@
 
 ## 🎮 仿真平台
 
+### ManiSkill3
+
+<div align="center">
+  <img src="tools-img/maniskill3.jpg" alt="ManiSkill3" style="width:100%">
+</div>
+
+<table style="width:100%;display:table;table-layout:fixed" width="100%">
+<tbody>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">一句话摘要</td><td style="word-wrap:break-word;width:1200px" width="1200">基于 SAPIEN 的 GPU 并行操作仿真、数据生成与策略评测一体框架，面向可泛化操作技能研究。</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">发布与维护</td><td style="word-wrap:break-word;width:1200px" width="1200">2024 年发布（RSS 2025 发表），仓库活跃维护至 2026 年</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">机构</td><td style="word-wrap:break-word;width:1200px" width="1200">斯坦福大学 Hao Su 实验室主导（haosulab）与开源社区</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">特点</td><td style="word-wrap:break-word;width:1200px" width="1200"><ul><li><strong>最快的 contact-rich GPU 并行仿真</strong>：模拟与渲染同 GPU 运行，30,000+ FPS（4090 上采集 RGBD+分割），比 Isaac/MJX 等快 10–1000×，显存占用低 2–3×</li><li><strong>异构仿真与大规模任务库</strong>：每个并行环境可装载不同场景，12 类任务域、20+ 机器人，场景来自 ReplicaCAD/AI2-THOR 等真实感资源</li><li><strong>数据与评测双向管线</strong>：Real2Sim 支持真实策略 100× 提速的仿真规模化评测，并提供数百万演示帧（运动规划/RL/遥操作来源）</li><li><strong>开箱即用策略基线全家桶</strong>：RL（PPO/SAC/TD-MPC2）、模仿学习（BC/Diffusion Policy）、VLA（Octo/RDT-1B/RT-x）均有调好配置</li></ul></td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">使用场景</td><td style="word-wrap:break-word;width:1200px" width="1200"><ul><li>GPU 大规模合成操作演示数据</li><li>视觉/状态 RL 与模仿学习训练</li><li>真实机器人策略的仿真规模化评测（SIMPLER 式）</li><li>多本体策略与新操作任务的快速基准对比</li></ul></td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">案例</td><td style="word-wrap:break-word;width:1200px" width="1200"><ul><li>作为操作策略统一评测平台，被 VLA/扩散策略等大量研究用于大规模合成演示与基准对比</li></ul></td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">数据与模型</td><td style="word-wrap:break-word;width:1200px" width="1200">ManiSkill3 框架（基于 SAPIEN）；ManiSkill2/3 基准任务与演示数据集</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">官方链接</td><td style="word-wrap:break-word;width:1200px" width="1200"><a href="https://github.com/haosulab/ManiSkill">GitHub haosulab/ManiSkill</a> · <a href="https://maniskill.ai/">官网 maniskill.ai</a> · <a href="https://maniskill.readthedocs.io/">文档</a> · <a href="https://arxiv.org/abs/2410.00425">论文 arXiv 2410.00425</a></td></tr>
+</tbody>
+</table>
+
 ### Genesis
 
 <div align="center">

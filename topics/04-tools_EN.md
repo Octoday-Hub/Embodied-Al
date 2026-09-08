@@ -12,6 +12,25 @@
 
 ## 🎮 Simulation Platforms
 
+### ManiSkill3
+
+<div align="center">
+  <img src="tools-img/maniskill3.jpg" alt="ManiSkill3" style="width:100%">
+</div>
+
+<table style="width:100%;display:table;table-layout:fixed" width="100%">
+<tbody>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">One-line summary</td><td style="word-wrap:break-word;width:1200px" width="1200">A SAPIEN-based GPU-parallel manipulation simulation, data-generation, and policy-evaluation framework for generalizable manipulation skills.</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Release & maintenance</td><td style="word-wrap:break-word;width:1200px" width="1200">Released 2024 (RSS 2025); actively maintained through 2026</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Organization</td><td style="word-wrap:break-word;width:1200px" width="1200">Stanford (Hao Su lab, haosulab) with the open-source community</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Highlights</td><td style="word-wrap:break-word;width:1200px" width="1200"><ul><li><strong>Fastest contact-rich GPU-parallel simulation</strong>: sim and rendering share one GPU, 30,000+ FPS (RGBD+seg on a 4090), 10-1000x faster than Isaac/MJX with 2-3x lower memory</li><li><strong>Heterogeneous simulation & large task zoo</strong>: every parallel env can load a different scene; 12 task domains, 20+ robots, scenes from ReplicaCAD/AI2-THOR</li><li><strong>Dual data & evaluation pipeline</strong>: Real2Sim enables 100x-accelerated large-scale evaluation of real policies, plus millions of demonstration frames (motion planning / RL / teleop)</li><li><strong>Ready-to-run baseline zoo</strong>: RL (PPO/SAC/TD-MPC2), imitation (BC/Diffusion Policy), and VLA (Octo/RDT-1B/RT-x) configs included</li></ul></td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Use cases</td><td style="word-wrap:break-word;width:1200px" width="1200"><ul><li>GPU-scale synthetic demonstration generation</li><li>Vision/state RL and imitation training</li><li>Simulation-scaled evaluation of real-robot policies (SIMPLER-style)</li><li>Rapid benchmark comparison across embodiments and new tasks</li></ul></td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Case studies</td><td style="word-wrap:break-word;width:1200px" width="1200"><ul><li>Used as a unified evaluation platform by many VLA / diffusion-policy studies for large-scale demo synthesis and benchmarking</li></ul></td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Data & models</td><td style="word-wrap:break-word;width:1200px" width="1200">ManiSkill3 framework (based on SAPIEN); ManiSkill2/3 benchmark tasks and demonstration datasets</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Official link</td><td style="word-wrap:break-word;width:1200px" width="1200"><a href="https://github.com/haosulab/ManiSkill">GitHub haosulab/ManiSkill</a> · <a href="https://maniskill.ai/">maniskill.ai</a> · <a href="https://maniskill.readthedocs.io/">Docs</a> · <a href="https://arxiv.org/abs/2410.00425">arXiv 2410.00425</a></td></tr>
+</tbody>
+</table>
+
 ### Genesis
 
 <div align="center">
