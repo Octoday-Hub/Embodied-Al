@@ -12,6 +12,84 @@
 
 ## Embodied Foundation Models
 
+### [AnyWorld: Factorized Egocentric World Models for Cross-Embodiment Generalization](https://arxiv.org/abs/2608.29242)
+
+<table style="width:100%;table-layout:fixed" width="100%">
+<tbody>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">一句话摘要</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">把单条人类交互分解重组为多样机器人域数据，无需配对示教即可跨具身扩展。</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">发布时间</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">2026 年 8 月</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">机构</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">小鹏机器人（合作腾讯、南洋理工大学）</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">特点</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640"><ul><li><strong>因子化世界模型</strong>：把一次交互分解为 action / camera / embodiment 三组独立控制，自由重组后把单条人类视频扩展为多样"机器人原生"数据</li><li>纯<strong>人类第一视角视频大语料预训练 + 混合本体微调</strong>，全程无需成对的人-机器人演示</li><li>重组数据可定向补足策略弱点（纠正"虚假完成"先验、建立语言锚定目标选择）</li></ul></td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">实验结论</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640"><ul><li>可控性指标 <strong>0.778</strong>，对比 Cosmos-Predict2.5 0.417、WAN Fun-Control 0.609</li><li>RoboCasa GR1 桌面抓放成功率 49.8% → <strong>54.6%</strong>；小鹏 IRON 人形真机 20 次抓取 20.0% → <strong>55.0%</strong></li></ul></td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">数据 / 模型</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">AnyWorld（开源，xpeng-robotics/AnyWorld）；人类 egocentric 交互视频预训练语料</td></tr>
+</tbody>
+</table>
+
+### [Beyond Data Scaling: Representation-Centric Continued Pre-training for Vision-Language-Action Models](https://arxiv.org/abs/2608.27550)
+
+<table style="width:100%;table-layout:fixed" width="100%">
+<tbody>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">一句话摘要</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">把 VLA 继续预训练重心从堆数据转向学表示，小数据预算反超全量基线。</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">发布时间</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">2026 年 8 月</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">机构</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">StarVLA 团队（VLAct 项目，作者含 Hengshuang Zhao、Bei Yu、Jiaya Jia 等）</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">特点</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640"><ul><li>提出独立于数据规模的<strong>以表示为中心的 VLA 继续预训练</strong>，把有限轨迹转成可迁移的视觉-动作知识</li><li><strong>OFT / PI / GR00T 三种动作头同时共同监督同一骨干</strong>，预训练后丢弃动作头、下游另挂任务专用头</li><li>基座 Qwen3-VL-4B，仅 <strong>16 张 GPU + 全开源数据</strong>，权重/检查点/数据管线/训练框架全量公开</li></ul></td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">实验结论</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640"><ul><li>LIBERO-Plus <strong>82.6%</strong>、RoboTwin 2.0 <strong>92.5%</strong>，超过 ABot-M0、LingBot-VLA 等基线</li><li>未见人形本体 RoboCasa-GR1 仅用 <strong>20%</strong> 下游轨迹达 <strong>49.5%</strong>，高于全量数据的 GR00T-N1.6（47.6%）</li><li>真机 4 个域内单臂任务平均 <strong>92.5%</strong>（无继续预训练基线 77.5%）</li></ul></td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">数据 / 模型</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">VLAct（基于 Qwen3-VL-4B）</td></tr>
+</tbody>
+</table>
+
+### [Riemann-1.0: An Embodied World Action Model for Physical AI](https://arxiv.org/abs/2608.27033)
+
+<table style="width:100%;table-layout:fixed" width="100%">
+<tbody>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">一句话摘要</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">全因果自回归世界动作模型，同一模型既当可执行机器人策略又是世界模拟器。</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">发布时间</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">2026 年 8 月</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">机构</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">黎曼动力（昆仑万维孵化的机器人公司）</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">特点</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640"><ul><li><strong>全因果自回归 World Action Model</strong>：动作位于视觉状态转移的因果链中（先动作、后视觉），区别于联合生成/视频优先/解耦路线</li><li>同一模型双用：既是<strong>闭环机器人策略</strong>，又是<strong>动作条件多本体视觉世界模拟器</strong></li><li><strong>三阶段渐进式具身预训练</strong>：LAM 潜在动作 bootstrap（人类视频）→ UMI/外骨骼轨迹对齐 → 机器人策略增强</li></ul></td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">实验结论</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640"><ul><li>仿真：LIBERO <strong>99.0%</strong>、RoboTwin 2.0 <strong>94.3%</strong>、长程组合基准 RoboCasa-365 <strong>62.6%</strong>（较此前最佳 +8.4 pp）</li><li>真机（天机双臂）四类家居任务平均 SR <strong>85.0%</strong>、PSR <strong>94.4%</strong>，平均领先最强开源基线 15 个 SR 点</li></ul></td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">数据 / 模型</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">Riemann-1.0；23.2 万小时多源数据（20 万+ 小时人类第一视角视频、1.2 万+ 小时 UMI/外骨骼示教、2 万+ 小时机器人轨迹，覆盖 41 种本体）</td></tr>
+</tbody>
+</table>
+
+### [One Policy, Many Embodiments: Unified Camera-Centric Action Geometry Pre-training for Heterogeneous Embodied Manipulation](https://arxiv.org/abs/2608.26058)
+
+<table style="width:100%;table-layout:fixed" width="100%">
+<tbody>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">一句话摘要</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">相机中心统一动作几何，让机械臂、人形与人手共享同一 VLA 策略的动作图式。</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">发布时间</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">2026 年 8 月</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">机构</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">小米具身智能团队 + 澳门大学</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">特点</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640"><ul><li>提出<strong>相机中心统一动作公式 UCAG-P</strong>：以相机可观测的末端锚点运动作为统一学习目标，绕开显式 action retargeting 与数据特异分支</li><li><strong>几何条件动作翻译器</strong>结合目标具身运动学，把共享预测运动转成可执行控制</li><li>解耦架构使共享 VLA 学到可迁移操作几何，同时保留各本体特异性可控性</li></ul></td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">实验结论</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640"><ul><li>单一 checkpoint、无 benchmark 特化微调：LIBERO <strong>98.3%</strong>、RoboTwin Easy <strong>88.7%</strong> / Hard <strong>89.2%</strong></li><li>LIBERO-Plus 零样本 <strong>82.0%</strong>、RoboCasa GR-1 <strong>62.0%</strong></li></ul></td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">数据 / 模型</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">UCAG-P；4.03K 小时机器人+仿真数据与 2.34K 小时人类演示</td></tr>
+</tbody>
+</table>
+
+### [τ0-VLA: a Hierarchical Robot Foundation Model with World-Model-Guided Test-Time Computation](https://arxiv.org/abs/2608.16885)
+
+<table style="width:100%;table-layout:fixed" width="100%">
+<tbody>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">一句话摘要</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">慢思考+快执行分层 VLA，世界模型引导测试时计算，长程真机成功率翻倍。</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">发布时间</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">2026 年 8 月</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">机构</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">上海创智学院（罗剑岚团队）+ 智元机器人 + 香港中文大学</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">特点</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640"><ul><li><strong>双策略分层架构</strong>：高层生成语义子任务（"慢思考"），低层以更高频执行动作（"快执行"），两策略异步并行</li><li>首次将<strong>测试时计算扩展引入具身上层决策</strong>：低置信决策触发"候选子任务→世界模型预测→价值模型打分→束搜索"循环</li><li>配套<strong>执行记忆、世界模型、价值模型与反思模型</strong>四组件</li></ul></td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">实验结论</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640"><ul><li>4 个 13–25 步长程真机任务平均成功率 <strong>45.0%</strong>，对比 π0.5 22.5%、GR00T N1.7 2.5%</li><li>未见布局下测试时计算把下一子任务预测准确率从 50.0% 提升至 <strong>74.0%</strong></li></ul></td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">数据 / 模型</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">τ0-VLA（开源，Apache-2.0）；40,115 小时异构真实世界机器人数据</td></tr>
+</tbody>
+</table>
+
+### [StellaVLA: In-Context Structured Demonstration for Generalizable Vision-Language-Action Models](https://arxiv.org/abs/2608.11671)
+
+<table style="width:100%;table-layout:fixed" width="100%">
+<tbody>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">一句话摘要</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">检索一条结构化演示注入上下文，VLA 无需微调即可适应分布外场景。</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">发布时间</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">2026 年 8 月</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">机构</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">悉尼大学（Chang Xu 团队）+ StellarEdge AI</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">特点</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640"><ul><li>离线流水线把原始轨迹自动转为<strong>结构化演示</strong>（任务计划、子目标描述、语言化的 3D 运动），零人工标注</li><li><strong>并行双训练</strong>：动作专家 + 原生语言头共同监督同一骨干，推理时仅用动作专家，<strong>零推理延迟</strong></li><li>跨本体可迁移：真实机器人、人手与 XR 演示均可作为上下文</li></ul></td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">实验结论</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640"><ul><li>VLA-Arena 排行榜（2026-08-01）总分 <strong>0.63</strong> 居首，对比 π0.5 0.44、LingBot-VLA 0.22</li><li>LIBERO 平均成功率 <strong>98.8%</strong>，LIBERO-Plus 零样本 <strong>85.1%</strong></li></ul></td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">数据 / 模型</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">StellaVLA；结构化演示基于 Qwen3-VL 自动生成，真机验证于 AgileX Piper</td></tr>
+</tbody>
+</table>
+
 ### [Harness VLA: Steering Frozen VLAs into Reliable Manipulation Primitives via Memory-Guided Agent](https://arxiv.org/abs/2607.08448)
 
 <table style="width:100%;table-layout:fixed" width="100%">
@@ -745,6 +823,19 @@
 <a id="manipulation" name="manipulation"></a>
 ## Manipulation & Teleoperation
 
+### [Gripper-aware Vision Language Action Models](https://arxiv.org/abs/2608.24603)
+
+<table style="width:100%;table-layout:fixed" width="100%">
+<tbody>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">一句话摘要</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">让 VLA 显式感知夹爪形态，用多夹爪 tokenizer 与适配器路由实现跨夹爪操作。</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">发布时间</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">2026 年 8 月</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">机构</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">利物浦大学 AIRV Lab（联合 IISc、ZHAW、华中科技大学、Physical Intelligence 等）</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">特点</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640"><ul><li>直指现有 VLA 的<strong>“夹爪不变性”隐含假设</strong>：吸盘与平行爪对同一目标策略天然不同</li><li>提出 <strong>MiGA 多夹爪数据集</strong>：5 类夹爪、103K 演示、36 任务，含约 5% 失败演示</li><li>GVLA 引入<strong>三层软提示多夹爪 tokenizer</strong> + <strong>双 Mixture-of-Adapters 策略路由</strong>，平衡共享参数与策略分化</li></ul></td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">实验结论</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640"><ul><li>仿真四类任务平均成功率 <strong>66.0%</strong>（π0.5 底座），较最优基线提升 <strong>7.62 pp</strong></li><li>未见夹爪（Robotiq 2F-85）仅用 <strong>10 条演示 + 20K 步</strong>微调，适应成功率 <strong>0.92</strong>（去除适配器跌至 0.52）</li></ul></td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">数据 / 模型</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">GVLA 模型；MiGA 数据集（HuggingFace 开源）</td></tr>
+</tbody>
+</table>
+
 - **[arXiv 2026年7月](https://arxiv.org/abs/2607.23108)** The Curse of Precision: Data Scaling Law for High-Precision Robotic Manipulation. 研究机器人装配等封闭世界任务中数据与精度的关系，提出新缩放定律log(N) ∝ 1/(P - c)。
 
 - **[arXiv 2026年7月](https://arxiv.org/abs/2607.22530)** ViTacWorld: Scaling Visuo-Tactile World Models for Contact-Rich Manipulation. 利用真实和模拟数据预训练视觉-触觉世界模型，提升策略性能。
@@ -968,6 +1059,19 @@
 <a id="locomotion" name="locomotion"></a>
 ## Locomotion
 
+### [SleepWalking: Privileged Representation Shaping for End-to-End Blind Locomotion in Legged Robots](https://arxiv.org/abs/2608.30883)
+
+<table style="width:100%;table-layout:fixed" width="100%">
+<tbody>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">一句话摘要</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">训练时用特权物理重建塑造循环表征，端到端无感知腿足行走更稳且省算力。</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">发布时间</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">2026 年 8 月</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">机构</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">西北工业大学 + 上海交通大学 + 云幕智能制造</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">特点</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640"><ul><li>把部分可观测运动问题重新定义为<strong>“信息保持”问题</strong>：关键不是信息如何进入网络，而是内部状态能否留住它</li><li><strong>SWAQ 单阶段端到端框架</strong>：仅训练期用 next-step 特权重建（速度、无噪观测、地形高度）塑造循环历史表征，部署时只保留 history→action 通路</li><li>给出特权变量可恢复性与可达回报差的理论界</li></ul></td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">实验结论</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640"><ul><li>对齐训练设置下峰值平均地形等级较最强无外感基线 DWAQ 高 <strong>15.0%</strong></li><li>单控制步推理 MAC 少 <strong>44.4%</strong>；跨形态 sim2real（四足 Go1 与人形）一致通过楼梯地形</li></ul></td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">数据 / 模型</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">SWAQ 框架</td></tr>
+</tbody>
+</table>
+
 - **[arXiv 2026年5月](https://arxiv.org/abs/2605.14417)** Before the Body Moves: Learning Anticipatory Joint Intent for Language-Conditioned Humanoid Control (DAJI). 面向语言条件人形机器人控制的层次化框架，学习预期性联合意图表征，显式编码 upcoming 接触变化与平衡准备，实现稳定的全身动作生成。
 
 - **[arXiv 2026年4月](https://arxiv.org/abs/2604.19734)** UniT: Toward a Unified Physical Language for Human-to-Humanoid Policy Learning and World Modeling. 统一人类到人形机器人的物理语言框架，通过视觉锚定的潜在动作分词器连接跨本体策略学习与世界建模.
@@ -1017,6 +1121,19 @@
 <a id="navigation-spatial-intelligence" name="navigation-spatial-intelligence"></a>
 
 ## Navigation & Spatial Intelligence
+
+### [CrossTracer: Cross-Embodiment Navigation via VLA Model Reasoning and Trace Residuals Adapting](https://arxiv.org/abs/2608.06688)
+
+<table style="width:100%;table-layout:fixed" width="100%">
+<tbody>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">一句话摘要</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">VLA 语义推理 + 按本体残差适配的层级跨本体导航框架，图像平面路点为统一接口。</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">发布时间</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">2026 年 8 月</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">机构</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">鹏城实验室 + 南方科技大学</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">特点</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640"><ul><li>以<strong>归一化图像平面路点</strong>表示导航计划，形成语义推理与物理落地间的统一像素空间接口</li><li>两级结构：<strong>VL-Tracer</strong>（预训练 VLA 出初始轨迹）+ <strong>CE-Adapter</strong>（预测本体条件残差修正）</li><li><strong>CE-RRT*</strong> 把全景分割转为机器人条件代价图并自动生成训练标注，免人工标注</li></ul></td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">实验结论</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640"><ul><li>NaviTrace 基准总分 <strong>45.68</strong>，超过 Gemini-2.5-Pro（35.67）<strong>10.01 分、相对提升 28.1%</strong></li><li>轮式与足式机器人真机部署进一步提升导航成功率与执行效率</li></ul></td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">数据 / 模型</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">CrossTracer 框架；评测于 NaviTrace 基准</td></tr>
+</tbody>
+</table>
 
 - **[arXiv 2026年7月](https://arxiv.org/abs/2607.09716)** RoboNav-Arm: Agentic AI Navigation and Obstacle Avoidance for Manipulator. 面向机械臂的智能体AI导航与避障。
 <a id="simulation-sim2real" name="simulation-sim2real"></a>
@@ -1399,6 +1516,19 @@
 <a id="benchmarks-evaluation" name="benchmarks-evaluation"></a>
 
 ## Benchmarks & Evaluation
+
+### [GAUGE: A Measurement-Grounded Benchmark for Physical Fidelity in Simulation Engines and Video World Models](https://arxiv.org/abs/2608.05948)
+
+<table style="width:100%;table-layout:fixed" width="100%">
+<tbody>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">一句话摘要</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">以真实测量为锚，统一诊断物理引擎与视频世界模型物理保真度的基准。</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">发布时间</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">2026 年 8 月</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">机构</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">上海人工智能实验室 InternRobotics 团队（联合多家单位）</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">特点</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640"><ul><li>首个<strong>同时评测数值物理引擎与生成式视频世界模型</strong>物理保真的真实世界诊断基准</li><li><strong>22 个受控任务族</strong>覆盖刚体、柔性线缆、织物、体积形变物体</li><li>锚定真实轨迹并配<strong>标定物理元数据与不确定性标注</strong>，可定位“违背了哪条物理原理”</li></ul></td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">实验结论</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640"><ul><li>在 14 个任务族上评测 <strong>Isaac Sim、Genesis、Newton</strong>：不存在统一保真的物理引擎，最大偏差在冲击接触、快速织物与体积形变</li><li>6 个图生视频模型在刚体任务上可生成<strong>方程形式正确但加速度/动量/振荡时序错误</strong>的轨迹</li></ul></td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">数据 / 模型</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">GAUGE 基准（22 个任务族）</td></tr>
+</tbody>
+</table>
 
 - **[arXiv 2026年7月](https://arxiv.org/abs/2607.26789)** CheckVLA: Execution-Time Verification for Long-Horizon Mobile Manipulation. 基于动作条件世界模型的长时程移动操作执行时验证。
 

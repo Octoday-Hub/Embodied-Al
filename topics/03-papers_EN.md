@@ -12,6 +12,84 @@
 
 ## Embodied Foundation Models
 
+### [AnyWorld: Factorized Egocentric World Models for Cross-Embodiment Generalization](https://arxiv.org/abs/2608.29242)
+
+<table style="width:100%;table-layout:fixed" width="100%">
+<tbody>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">One-line summary</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">Factorizes a single human interaction and recombines it into diverse robot-native data for embodiment-agnostic scaling without paired demonstrations.</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Release date</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">August 2026</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Organization</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">XPENG Robotics (with Tencent and NTU collaborators)</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Highlights</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640"><ul><li><strong>Factorized world model</strong>: decomposes an interaction into independent action / camera / embodiment controls, recombining factors to expand a single human video into diverse robot-native data</li><li>Pretrains on <strong>human egocentric video at scale + mixed-embodiment finetuning</strong>, no paired human-robot demonstrations needed</li><li>Recombined video-action pairs can target policy weaknesses (e.g., fixing "false completion" priors, grounding language-anchored goal selection)</li></ul></td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Results</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640"><ul><li>Controllability avg <strong>0.778</strong> vs Cosmos-Predict2.5 0.417, WAN Fun-Control 0.609</li><li>RoboCasa GR1 tabletop success 49.8% to <strong>54.6%</strong>; XPENG IRON humanoid real-robot grasp 20.0% to <strong>55.0%</strong></li></ul></td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Data / Models</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">AnyWorld (open-source, xpeng-robotics/AnyWorld); egocentric interaction video corpus</td></tr>
+</tbody>
+</table>
+
+### [Beyond Data Scaling: Representation-Centric Continued Pre-training for Vision-Language-Action Models](https://arxiv.org/abs/2608.27550)
+
+<table style="width:100%;table-layout:fixed" width="100%">
+<tbody>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">One-line summary</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">Shifts VLA continued pretraining from data scaling to representation learning; beats full-data baselines with a small data budget.</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Release date</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">August 2026</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Organization</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">StarVLA team (VLAct; incl. Hengshuang Zhao, Bei Yu, Jiaya Jia)</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Highlights</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640"><ul><li>Introduces <strong>representation-centric continued pretraining</strong> as an axis independent of data scale, converting a fixed robot-data budget into transferable vision-action knowledge</li><li><strong>Three action heads (OFT / PI / GR00T) jointly supervise one backbone</strong>; heads are discarded after pretraining, task-specific heads attached downstream</li><li>Qwen3-VL-4B base, trained with only <strong>16 GPUs and fully open data</strong>; weights/checkpoints/pipeline released</li></ul></td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Results</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640"><ul><li>LIBERO-Plus <strong>82.6%</strong>, RoboTwin 2.0 <strong>92.5%</strong>, surpassing ABot-M0 and LingBot-VLA</li><li>On unseen humanoid RoboCasa-GR1, <strong>20%</strong> of downstream data reaches <strong>49.5%</strong>, above full-data GR00T-N1.6 (47.6%)</li><li>Real-robot avg success <strong>92.5%</strong> across 4 in-domain tasks (77.5% without continued pretraining)</li></ul></td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Data / Models</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">VLAct (Qwen3-VL-4B backbone)</td></tr>
+</tbody>
+</table>
+
+### [Riemann-1.0: An Embodied World Action Model for Physical AI](https://arxiv.org/abs/2608.27033)
+
+<table style="width:100%;table-layout:fixed" width="100%">
+<tbody>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">One-line summary</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">A fully causal autoregressive World Action Model that acts as both an executable robot policy and a world simulator.</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Release date</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">August 2026</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Organization</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">Riemann Dynamics (robot company incubated by Kunlun Wanwei)</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Highlights</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640"><ul><li><strong>Fully causal autoregressive WAM</strong>: actions sit in the causal chain of visual state transitions (action before vision), unlike joint-generation / video-first / decoupled routes</li><li>One model, dual use: <strong>closed-loop robot policy</strong> plus <strong>action-conditioned multi-embodiment visual world simulator</strong></li><li><strong>Three-stage progressive embodied pretraining</strong>: LAM latent-action bootstrap on human video to UMI/exoskeleton alignment to robot-policy enhancement</li></ul></td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Results</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640"><ul><li>LIBERO <strong>99.0%</strong>, RoboTwin 2.0 <strong>94.3%</strong>, long-horizon RoboCasa-365 <strong>62.6%</strong> (+8.4 pp over prior best)</li><li>Real-robot (Tianji dual-arm) household tasks: avg SR <strong>85.0%</strong>, PSR <strong>94.4%</strong>, leading strongest open baseline by 15 SR points on average</li></ul></td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Data / Models</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">Riemann-1.0; 232K hours of multisource data (200K+ h human egocentric video, 12K+ h UMI/exoskeleton demos, 20K+ h robot trajectories, 41 embodiments)</td></tr>
+</tbody>
+</table>
+
+### [One Policy, Many Embodiments: Unified Camera-Centric Action Geometry Pre-training for Heterogeneous Embodied Manipulation](https://arxiv.org/abs/2608.26058)
+
+<table style="width:100%;table-layout:fixed" width="100%">
+<tbody>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">One-line summary</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">A unified camera-centric action geometry lets arms, humanoids, and hands share one VLA policy's action schema.</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Release date</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">August 2026</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Organization</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">Xiaomi Embodied Intelligence Team + University of Macau</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Highlights</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640"><ul><li>Introduces <strong>UCAG-P, a camera-centric unified action formulation</strong>: observable end-effector anchor motion as the shared learning target, bypassing explicit action retargeting and data-specific branches</li><li>A <strong>geometry-conditioned action translator</strong> converts shared predicted motion into executable control given target-embodiment kinematics</li><li>Decoupled design lets a shared VLA learn transferable manipulation geometry while keeping embodiment-specific controllability</li></ul></td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Results</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640"><ul><li>Single checkpoint, no benchmark-specific finetuning: LIBERO <strong>98.3%</strong>, RoboTwin Easy <strong>88.7%</strong> / Hard <strong>89.2%</strong></li><li>LIBERO-Plus zero-shot <strong>82.0%</strong>, RoboCasa GR-1 <strong>62.0%</strong></li></ul></td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Data / Models</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">UCAG-P; 4.03K hours robot+sim data and 2.34K hours human demos</td></tr>
+</tbody>
+</table>
+
+### [τ0-VLA: a Hierarchical Robot Foundation Model with World-Model-Guided Test-Time Computation](https://arxiv.org/abs/2608.16885)
+
+<table style="width:100%;table-layout:fixed" width="100%">
+<tbody>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">One-line summary</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">A slow-think/fast-exec hierarchical VLA with world-model-guided test-time computation that doubles long-horizon real-robot success.</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Release date</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">August 2026</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Organization</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">Shanghai Frontier Innovation Institute (Luo Jianlan's team) + Agibot + CUHK</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Highlights</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640"><ul><li><strong>Two-policy hierarchical architecture</strong>: a high-level policy proposes semantic subtasks ("slow thinking") while a low-level policy executes actions at higher frequency ("fast execution"), running asynchronously</li><li>First to bring <strong>test-time computation into embodied high-level decisions</strong>: low-confidence choices trigger a candidate-subtask -> world-model rollout -> value scoring -> beam search loop</li><li>Ships <strong>execution memory, world model, value model, and reflection model</strong></li></ul></td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Results</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640"><ul><li>Avg success <strong>45.0%</strong> across four 13-25-step long-horizon real-robot tasks vs π0.5 22.5%, GR00T N1.7 2.5%</li><li>Under unseen layouts, TTC lifts next-subtask prediction from 50.0% to <strong>74.0%</strong></li></ul></td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Data / Models</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">τ0-VLA (open-source, Apache-2.0); 40,115 hours heterogeneous real-world robot data</td></tr>
+</tbody>
+</table>
+
+### [StellaVLA: In-Context Structured Demonstration for Generalizable Vision-Language-Action Models](https://arxiv.org/abs/2608.11671)
+
+<table style="width:100%;table-layout:fixed" width="100%">
+<tbody>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">One-line summary</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">Conditioning on one retrieved structured demonstration lets a VLA adapt to out-of-distribution scenes without finetuning.</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Release date</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">August 2026</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Organization</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">University of Sydney (Chang Xu lab) + StellarEdge AI</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Highlights</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640"><ul><li>An offline pipeline converts raw trajectories into <strong>structured demonstrations</strong> (task plan, sub-goal descriptions, verbalized 3D motion) at zero annotation cost</li><li><strong>Parallel dual training</strong>: an action expert and the native language head supervise one shared backbone; inference uses the action expert alone with <strong>no added latency</strong></li><li>Cross-embodiment transfer: real-robot, human-hand, and XR demonstrations all work as context</li></ul></td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Results</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640"><ul><li>Ranks first on VLA-Arena (Aug 1, 2026) with <strong>0.63</strong> overall vs π0.5 0.44 and LingBot-VLA 0.22</li><li>LIBERO avg success <strong>98.8%</strong>; LIBERO-Plus zero-shot <strong>85.1%</strong></li></ul></td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Data / Models</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">StellaVLA; structured demos auto-generated with Qwen3-VL, validated on AgileX Piper</td></tr>
+</tbody>
+</table>
+
 ### [Harness VLA: Steering Frozen VLAs into Reliable Manipulation Primitives via Memory-Guided Agent](https://arxiv.org/abs/2607.08448)
 
 <table style="width:100%;table-layout:fixed" width="100%">
@@ -749,6 +827,19 @@
 
 ## Manipulation & Teleoperation
 
+### [Gripper-aware Vision Language Action Models](https://arxiv.org/abs/2608.24603)
+
+<table style="width:100%;table-layout:fixed" width="100%">
+<tbody>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">One-line summary</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">Makes VLAs explicitly gripper-aware via a multi-gripper tokenizer and adapter routing for cross-gripper manipulation.</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Release date</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">August 2026</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Organization</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">University of Liverpool AIRV Lab (with IISc, ZHAW, HUST, Physical Intelligence, et al.)</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Highlights</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640"><ul><li>Challenges VLAs' implicit <strong>"gripper-invariance" assumption</strong>: suction cups and parallel jaws are naturally different for the same goal policy</li><li>Introduces <strong>MiGA, a multi-gripper dataset</strong>: 5 gripper types, 103K demos, 36 tasks, ~5% failure demos included</li><li>GVLA adds <strong>three-layer soft-prompt multi-gripper tokenization</strong> plus <strong>dual Mixture-of-Adapters routing</strong>, balancing shared parameters and per-gripper specialization</li></ul></td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Results</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640"><ul><li>Avg sim success <strong>66.0%</strong> across four task suites (π0.5 base), +<strong>7.62 pp</strong> over best baseline</li><li>Unseen gripper (Robotiq 2F-85) adapts with only <strong>10 demos + 20K steps</strong>, success <strong>0.92</strong> (drops to 0.52 without adapters)</li></ul></td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Data / Models</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">GVLA model; MiGA dataset (open on HuggingFace)</td></tr>
+</tbody>
+</table>
+
 - **[arXiv Jul 2026](https://arxiv.org/abs/2607.23108)** Curse of Precision: Scaling Law. Discovers a new scaling law for precision tasks: log(N) ∝ 1/(P - c), revealing the emergent property of precision ceiling.
 
 - **[arXiv Jul 2026](https://arxiv.org/abs/2607.22530)** ViTacWorld: Visuo-Tactile World Models. Scales visuo-tactile world models using real and simulated data for contact-rich manipulation.
@@ -975,6 +1066,19 @@
 
 ## Locomotion
 
+### [SleepWalking: Privileged Representation Shaping for End-to-End Blind Locomotion in Legged Robots](https://arxiv.org/abs/2608.30883)
+
+<table style="width:100%;table-layout:fixed" width="100%">
+<tbody>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">One-line summary</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">Shapes recurrent representations with privileged physical reconstruction during training for more stable, cheaper end-to-end blind legged locomotion.</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Release date</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">August 2026</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Organization</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">Northwestern Polytechnical University + Shanghai Jiao Tong University + Yunmu Intelligent Manufacturing</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Highlights</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640"><ul><li>Reframes partially observable locomotion as an <strong>"information retention" problem</strong>: what matters is whether internal state can keep information, not how it enters the network</li><li><strong>SWAQ single-stage end-to-end framework</strong>: privileged next-step reconstruction (velocity, noise-free observations, terrain height) shapes the recurrent history representation only during training; deployment keeps only the history-to-action path</li><li>Provides theoretical bounds on privileged-variable recoverability and attainable return gaps</li></ul></td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Results</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640"><ul><li>Peak average terrain level <strong>15.0%</strong> higher than the strongest exteroception-free baseline (DWAQ) under matched training</li><li>Single control-step inference uses <strong>44.4%</strong> fewer MACs; cross-embodiment sim2real (Quadruped Go1 and humanoid) passes stair terrain consistently</li></ul></td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Data / Models</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">SWAQ framework</td></tr>
+</tbody>
+</table>
+
 - **[arXiv May 2026](https://arxiv.org/abs/2605.14417)** Before the Body Moves: Learning Anticipatory Joint Intent for Language-Conditioned Humanoid Control (DAJI). A hierarchical framework for language-conditioned humanoid control that learns anticipatory joint-intent representations and explicitly encodes upcoming contact changes and balance preparation for stable whole-body motion generation.
 
 - **[arXiv April 2026](https://arxiv.org/abs/2604.19734)** UniT: Toward a Unified Physical Language for Human-to-Humanoid Policy Learning and World Modeling. A unified physical language for policy learning and world modeling from humans to humanoids, using visually grounded latent action tokenization to bridge cross-embodiment learning.
@@ -1031,6 +1135,19 @@
 </table>
 
 ## Navigation & Spatial Intelligence
+
+### [CrossTracer: Cross-Embodiment Navigation via VLA Model Reasoning and Trace Residuals Adapting](https://arxiv.org/abs/2608.06688)
+
+<table style="width:100%;table-layout:fixed" width="100%">
+<tbody>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">One-line summary</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">A hierarchical cross-embodiment navigation framework combining VLA reasoning with embodiment-specific residual adaptation over image-plane waypoints.</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Release date</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">August 2026</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Organization</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">Peng Cheng Laboratory + Southern University of Science and Technology</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Highlights</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640"><ul><li>Represents navigation plans as <strong>normalized image-plane waypoints</strong>, a unified pixel-space interface between semantic reasoning and physical execution</li><li>Two-level structure: <strong>VL-Tracer</strong> (pretrained VLA proposes initial traces) + <strong>CE-Adapter</strong> (predicts embodiment-conditioned residual corrections)</li><li><strong>CE-RRT*</strong> converts panoptic segmentation into robot-conditioned cost maps and auto-generates training traces without human labels</li></ul></td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Results</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640"><ul><li>NaviTrace total score <strong>45.68</strong>, beating Gemini-2.5-Pro (35.67) by <strong>10.01 points (+28.1%)</strong></li><li>Real-robot deployments on wheeled and legged robots further improve success and efficiency</li></ul></td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Data / Models</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">CrossTracer framework; evaluated on NaviTrace benchmark</td></tr>
+</tbody>
+</table>
 
 - **[arXiv Jul 2026](https://arxiv.org/abs/2607.09716)** RoboNav-Arm: Navigation for Manipulators. Agentic AI-driven navigation and obstacle avoidance for robotic manipulators.
 <a id="simulation-sim2real" name="simulation-sim2real"></a>
@@ -1429,6 +1546,19 @@
 <a id="benchmarks-evaluation" name="benchmarks-evaluation"></a>
 
 ## Benchmarks & Evaluation
+
+### [GAUGE: A Measurement-Grounded Benchmark for Physical Fidelity in Simulation Engines and Video World Models](https://arxiv.org/abs/2608.05948)
+
+<table style="width:100%;table-layout:fixed" width="100%">
+<tbody>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">One-line summary</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">A measurement-anchored benchmark that uniformly diagnoses physical fidelity of physics engines and video world models.</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Release date</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">August 2026</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Organization</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">Shanghai AI Laboratory InternRobotics (with multiple institutions)</td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Highlights</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640"><ul><li>First real-world diagnostic benchmark that <strong>evaluates numerical physics engines and generative video world models together</strong> for physical fidelity</li><li><strong>22 controlled task families</strong> covering rigid bodies, cables, fabrics, and volumetrically deformable objects</li><li>Anchors real trajectories with <strong>calibrated physical metadata and uncertainty annotations</strong>, localizing which physical law/parameter is violated</li></ul></td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Results</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640"><ul><li>Across 14 task families, <strong>Isaac Sim, Genesis, and Newton</strong> show no universally faithful engine; largest deviations in impact contacts, fast fabrics, and volumetric deformation</li><li>Six image-to-video models generate trajectories that are <strong>equation-form-correct but wrong in acceleration/momentum/oscillation timing</strong></li></ul></td></tr>
+<tr><td style="width:110px;min-width:110px;max-width:110px" width="110">Data / Models</td><td style="word-wrap:break-word;width:640px;min-width:640px;max-width:640px" width="640">GAUGE benchmark (22 task families)</td></tr>
+</tbody>
+</table>
 
 - **[arXiv Jul 2026](https://arxiv.org/abs/2607.26789)** CheckVLA: Execution-Time Verification. Execution-time verification with action-conditioned world model for mobile manipulation.
 

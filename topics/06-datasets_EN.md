@@ -1,6 +1,6 @@
 # Embodied AI Datasets
 
-> 46 representative datasets covering real-world collection, cross-embodiment aggregation, RGB-D / force / tactile sensing, tabletop manipulation, simulation benchmarks, and automated data generation. Statistics follow official pages, repositories, and papers.
+> 51 representative datasets covering real-world collection, cross-embodiment aggregation, RGB-D / force / tactile sensing, tabletop manipulation, simulation benchmarks, and automated data generation. Statistics follow official pages, repositories, and papers.
 
 ---
 
@@ -51,9 +51,14 @@
 | [ARCTIC](#ds-arctic) | Articulated hand-object interaction dataset | Real-world | 2.1M frames / 339 sequences / 11 articulated objects | Dual-view RGB + 3D hand/object meshes + contact | [Homepage](https://arctic.is.tue.mpg.de/) |
 | [GigaHands](#ds-gigahands) | Large-scale multi-view hand manipulation dataset | Real-world | 34 hours / 14k clips / 183M frames | Multi-view RGB + 3D hand/object poses + text | [Homepage](https://ivl.cs.brown.edu/research/gigahands.html) |
 | [EgoDex](#ds-egodex) | Apple egocentric tabletop manipulation dataset | Real-world | 829 hours / 338k demos / 194 task types | 1080p RGB + 3D hand skeleton + language | [Homepage](https://github.com/apple/ml-egodex) |
-| [DexCap Dataset](#ds-dexcap) | Portable hand-capture dexterous manipulation data | Real-world | 6 dexterous task evaluations | 3D point clouds + hand mocap | [Homepage](https://dex-cap.github.io/) |
-| [HumanPlus Dataset](#ds-humanplus-data) | Humanoid shadowing full-body data | Real-world | 40 hours human motion / up to 40 demos per task | Egocentric RGB + full-body joints | [Homepage](https://humanoid-ai.github.io/) |
+| [DexCap](#ds-dexcap) | Portable hand-capture dexterous manipulation data | Real-world | 6 dexterous task evaluations | 3D point clouds + hand mocap | [Homepage](https://dex-cap.github.io/) |
+| [HumanPlus](#ds-humanplus-data) | Humanoid shadowing full-body data | Real-world | 40 hours human motion / up to 40 demos per task | Egocentric RGB + full-body joints | [Homepage](https://humanoid-ai.github.io/) |
 | [LeRobot Community Datasets](#ds-lerobot-data) | Hugging Face community robot dataset collection | Real-world | ~189 datasets (growing) | Multi-camera RGB + state/action + language | [Homepage](https://huggingface.co/lerobot) |
+| [ABC-130K](#ds-abc-130k) | Largest open bimanual teleoperation dataset | Real-world | 134,806 episodes / 3,553 hours | 3-view RGB + state/action | [Homepage](https://abc.bot/) |
+| [TableVerse-100K](#ds-tableverse-100k) | Real2Sim physically-consistent tabletop scenes | Simulation-generated | 100K scenes / 1M object instances | Synthetic multi-view RGB + meshes | [Homepage](https://bytedance.github.io/TableVerse/) |
+| [DexCanvas](#ds-dexcanvas) | Human dexterous hands + per-frame contact force | Real + sim expansion | 70h seed / 7,000h planned | Multi-view RGB-D + MANO + force | [Homepage](https://dexcanvas.github.io/) |
+| [Humanoid Everyday](#ds-humanoideveryday) | Open-world humanoid whole-body operation | Real-world | 10.3K trajectories / 260 tasks | RGB + depth + LiDAR + tactile | [Homepage](https://humanoideveryday.github.io/) |
+| [VTDexManip](#ds-vtdexmanip) | Human tactile data + dexterous benchmark | Real + simulation | 565k frames / 2,032 sequences | RGB + fingertip tactile | [Homepage](https://lqts.github.io/VTDexManip/) |
 
 ---
 
@@ -1180,7 +1185,7 @@
 
 ---
 
-### DexCap Dataset
+### DexCap
 
 <a id="ds-dexcap"></a>
 
@@ -1189,7 +1194,7 @@
 <a id="dexcap-sample"></a>
 
 <div align="center">
-  <img src="datasets-img/dexcap-sample-01.png" alt="DexCap Dataset" height="520">
+  <img src="datasets-img/dexcap-sample-01.png" alt="DexCap" height="520">
 </div>
 
 <table style="width:100%;table-layout:fixed" width="100%">
@@ -1206,7 +1211,7 @@
 
 ---
 
-### HumanPlus Dataset
+### HumanPlus
 
 <a id="ds-humanplus-data"></a>
 
@@ -1215,7 +1220,7 @@
 <a id="humanplus-data-sample"></a>
 
 <div align="center">
-  <img src="datasets-img/humanplus-data-sample-01.png" alt="HumanPlus Dataset" height="520">
+  <img src="datasets-img/humanplus-data-sample-01.png" alt="HumanPlus" height="520">
 </div>
 
 <table style="width:100%;table-layout:fixed" width="100%">
@@ -1256,3 +1261,132 @@
 </tbody>
 </table>
 
+---
+
+### ABC-130K
+
+<a id="ds-abc-130k"></a>
+
+[Homepage](https://abc.bot/) · [Paper](https://arxiv.org/abs/2606.27375)
+
+<a id="abc-130k-sample"></a>
+
+<div align="center">
+  <img src="datasets-img/abc-130k-sample-01.jpg" alt="ABC-130K" height="520">
+</div>
+
+<table style="width:100%;table-layout:fixed" width="100%">
+<tbody>
+<tr><td rowspan="4" style="width:130px;min-width:130px;max-width:130px" width="130">Overview</td><td style="width:130px;min-width:130px;max-width:130px" width="130">Dataset Visualizer</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620">[Project page](https://abc.bot/) - task videos, data stats, hardware and open training/evaluation stacks.</td></tr>
+<tr><td style="width:130px;min-width:130px;max-width:130px" width="130">Source</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620">UC Berkeley / MIT / Amazon FAR / XDOF / CMU</td></tr>
+<tr><td style="width:130px;min-width:130px;max-width:130px" width="130">Why it matters</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620">The largest open bimanual teleoperation dataset, 134K episodes across 195 tasks, with GELLO-style hardware, training code, and an evaluation rubric for scalable bimanual behavior cloning.</td></tr>
+<tr><td style="width:130px;min-width:130px;max-width:130px" width="130">Usage</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620"><ul><li><strong>Download</strong>: HuggingFace XDOF/ABC-130k (gated)</li><li><strong>Code</strong>: github.com/amazon-far/abc (open)</li></ul></td></tr>
+<tr><td rowspan="3" style="width:130px;min-width:130px;max-width:130px" width="130">Data design</td><td style="width:130px;min-width:130px;max-width:130px" width="130">Collection</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620">Teleoperation with passive GELLO-style leader arms on dual 6-DoF YAM platforms; plus 400 hours of simulated teleoperation</td></tr>
+<tr><td style="width:130px;min-width:130px;max-width:130px" width="130">Scale</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620">134,806 episodes / 195 tasks / 3,553 hours real data; 20 sim tasks, 400 hours</td></tr>
+<tr><td style="width:130px;min-width:130px;max-width:130px" width="130">Modalities</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620"><ul><li><strong>Vision</strong>: 3-view RGB (top + dual wrist, 224x224 stacked MP4)</li><li><strong>Proprioception</strong>: 14-dim state/action</li><li><strong>Annotation</strong>: task / subtask labels</li></ul></td></tr>
+</tbody>
+</table>
+
+---
+
+### TableVerse-100K
+
+<a id="ds-tableverse-100k"></a>
+
+[Homepage](https://bytedance.github.io/TableVerse/) · [Paper](https://arxiv.org/abs/2607.21017)
+
+<a id="tableverse-100k-sample"></a>
+
+<div align="center">
+  <img src="datasets-img/tableverse-100k-sample-01.png" alt="TableVerse-100K" height="520">
+</div>
+
+<table style="width:100%;table-layout:fixed" width="100%">
+<tbody>
+<tr><td rowspan="4" style="width:130px;min-width:130px;max-width:130px" width="130">Overview</td><td style="width:130px;min-width:130px;max-width:130px" width="130">Dataset Visualizer</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620">[Project page](https://bytedance.github.io/TableVerse/) - pipeline, category and task-generation overviews.</td></tr>
+<tr><td style="width:130px;min-width:130px;max-width:130px" width="130">Source</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620">ByteDance</td></tr>
+<tr><td style="width:130px;min-width:130px;max-width:130px" width="130">Why it matters</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620">Generates 100K physically consistent tabletop scenes from real web images via deterministic Real2Sim reconstruction, contrasting with text-hallucinated layouts, and suits sim pretraining for tabletop manipulation.</td></tr>
+<tr><td style="width:130px;min-width:130px;max-width:130px" width="130">Usage</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620"><ul><li><strong>Download</strong>: dataset entry on project page</li><li><strong>Code</strong>: github.com/bytedance/TableVerse (Apache-2.0)</li></ul></td></tr>
+<tr><td rowspan="3" style="width:130px;min-width:130px;max-width:130px" width="130">Data design</td><td style="width:130px;min-width:130px;max-width:130px" width="130">Collection</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620">Real web images to deterministic Real2Sim physical reconstruction and stabilization, then automated generation of collision-free pick-and-place traces</td></tr>
+<tr><td style="width:130px;min-width:130px;max-width:130px" width="130">Scale</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620">100,000 physically consistent scenes; ~1M object instances, 35K+ semantic categories; 7 scene themes</td></tr>
+<tr><td style="width:130px;min-width:130px;max-width:130px" width="130">Modalities</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620"><ul><li><strong>Vision</strong>: synthetic multi-view RGB (front / top)</li><li><strong>Geometry</strong>: physically stable mesh assets</li><li><strong>Action</strong>: collision-free expert traces</li></ul></td></tr>
+</tbody>
+</table>
+
+---
+
+### DexCanvas
+
+<a id="ds-dexcanvas"></a>
+
+[Homepage](https://dexcanvas.github.io/) · [Paper](https://arxiv.org/abs/2510.15786)
+
+<a id="dexcanvas-sample"></a>
+
+<div align="center">
+  <img src="datasets-img/dexcanvas-sample-01.png" alt="DexCanvas" height="520">
+</div>
+
+<table style="width:100%;table-layout:fixed" width="100%">
+<tbody>
+<tr><td rowspan="4" style="width:130px;min-width:130px;max-width:130px" width="130">Overview</td><td style="width:130px;min-width:130px;max-width:130px" width="130">Dataset Visualizer</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620">[Project page](https://dexcanvas.github.io/) - mocap and RL reconstruction samples.</td></tr>
+<tr><td style="width:130px;min-width:130px;max-width:130px" width="130">Source</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620">DexRobot (with University of Michigan, Shanghai Jiao Tong University, et al.)</td></tr>
+<tr><td style="width:130px;min-width:130px;max-width:130px" width="130">Why it matters</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620">Human dexterous-hand data that is, for the first time at scale, paired with physically consistent per-frame contact forces; covers 21 manipulation classes under the Cutkosky taxonomy.</td></tr>
+<tr><td style="width:130px;min-width:130px;max-width:130px" width="130">Usage</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620"><ul><li><strong>Download</strong>: HuggingFace DEXROBOT/DexCanvas (v0.1, ODbL)</li><li><strong>Code</strong>: github.com/dexrobot/dexcanvas</li></ul></td></tr>
+<tr><td rowspan="3" style="width:130px;min-width:130px;max-width:130px" width="130">Data design</td><td style="width:130px;min-width:130px;max-width:130px" width="130">Collection</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620">Optical motion capture of human hands + RL real-to-sim physical expansion (x100)</td></tr>
+<tr><td style="width:130px;min-width:130px;max-width:130px" width="130">Scale</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620">v0.1 test release ~70h / 30M frames (1% sample); full release planned at 7,000 hours (70h seed x100), 30 objects</td></tr>
+<tr><td style="width:130px;min-width:130px;max-width:130px" width="130">Modalities</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620"><ul><li><strong>Vision</strong>: multi-view RGB-D</li><li><strong>Pose</strong>: MANO hand params + 6-DoF object pose</li><li><strong>Force</strong>: per-frame contact point and force/torque</li></ul></td></tr>
+</tbody>
+</table>
+
+---
+
+### Humanoid Everyday
+
+<a id="ds-humanoideveryday"></a>
+
+[Homepage](https://humanoideveryday.github.io/) · [Paper](https://arxiv.org/abs/2510.08807)
+
+<a id="humanoideveryday-sample"></a>
+
+<div align="center">
+  <img src="datasets-img/humanoideveryday-sample-01.jpg" alt="Humanoid Everyday" height="520">
+</div>
+
+<table style="width:100%;table-layout:fixed" width="100%">
+<tbody>
+<tr><td rowspan="4" style="width:130px;min-width:130px;max-width:130px" width="130">Overview</td><td style="width:130px;min-width:130px;max-width:130px" width="130">Dataset Visualizer</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620">[Project page](https://humanoideveryday.github.io/) - task overview and demo visuals.</td></tr>
+<tr><td style="width:130px;min-width:130px;max-width:130px" width="130">Source</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620">University of Southern California (USC) + Toyota Research Institute (TRI)</td></tr>
+<tr><td style="width:130px;min-width:130px;max-width:130px" width="130">Why it matters</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620">An open-world humanoid whole-body operation dataset spanning 7 task categories including mobile manipulation, deformable objects, tool use, and human-robot interaction, with a focus on full-body operation.</td></tr>
+<tr><td style="width:130px;min-width:130px;max-width:130px" width="130">Usage</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620"><ul><li><strong>Download</strong>: not yet public on the site (as of Sep 2026; access to follow)</li></ul></td></tr>
+<tr><td rowspan="3" style="width:130px;min-width:130px;max-width:130px" width="130">Data design</td><td style="width:130px;min-width:130px;max-width:130px" width="130">Collection</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620">Supervised teleoperation in the real world</td></tr>
+<tr><td style="width:130px;min-width:130px;max-width:130px" width="130">Scale</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620">10.3K trajectories / 260 tasks / 7 categories / 3M+ frames @30Hz</td></tr>
+<tr><td style="width:130px;min-width:130px;max-width:130px" width="130">Modalities</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620"><ul><li><strong>Vision</strong>: RGB + depth + LiDAR</li><li><strong>Force</strong>: tactile</li><li><strong>Annotation</strong>: natural-language task descriptions</li></ul></td></tr>
+</tbody>
+</table>
+
+---
+
+### VTDexManip
+
+<a id="ds-vtdexmanip"></a>
+
+[Homepage](https://lqts.github.io/VTDexManip/) · [Paper](https://openreview.net/forum?id=jf7C7EGw21)
+
+<a id="vtdexmanip-sample"></a>
+
+<div align="center">
+  <img src="datasets-img/vtdexmanip-sample-01.jpg" alt="VTDexManip" height="520">
+</div>
+
+<table style="width:100%;table-layout:fixed" width="100%">
+<tbody>
+<tr><td rowspan="4" style="width:130px;min-width:130px;max-width:130px" width="130">Overview</td><td style="width:130px;min-width:130px;max-width:130px" width="130">Dataset Visualizer</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620">[Project page](https://lqts.github.io/VTDexManip/) - dataset and benchmark overviews.</td></tr>
+<tr><td style="width:130px;min-width:130px;max-width:130px" width="130">Source</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620">Zhejiang University</td></tr>
+<tr><td style="width:130px;min-width:130px;max-width:130px" width="130">Why it matters</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620">Human tactile data collected with a 20-channel piezoresistive glove, paired with a Shadow Hand dexterous RL benchmark (6 tasks, 18 methods), supports visuo-tactile joint pretraining with validated sim-to-real transfer.</td></tr>
+<tr><td style="width:130px;min-width:130px;max-width:130px" width="130">Usage</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620"><ul><li><strong>Download</strong>: OneDrive (password vtdexmanip)</li><li><strong>Code</strong>: github.com/LQTS/VTDexManip (open)</li></ul></td></tr>
+<tr><td rowspan="3" style="width:130px;min-width:130px;max-width:130px" width="130">Data design</td><td style="width:130px;min-width:130px;max-width:130px" width="130">Collection</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620">Human demos with a piezoresistive tactile glove + Shadow Hand benchmark in Isaac Gym</td></tr>
+<tr><td style="width:130px;min-width:130px;max-width:130px" width="130">Scale</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620">565k frames / 2,032 sequences / 5 subjects / 10 daily tasks / 182 objects</td></tr>
+<tr><td style="width:130px;min-width:130px;max-width:130px" width="130">Modalities</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620"><ul><li><strong>Vision</strong>: RGB</li><li><strong>Tactile</strong>: fingertip piezoresistive (robust to sim noise after binarization)</li><li><strong>Pose</strong>: grasp pose</li></ul></td></tr>
+</tbody>
+</table>

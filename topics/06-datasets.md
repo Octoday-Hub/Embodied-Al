@@ -1,6 +1,6 @@
 # 具身智能数据集
 
-> 46 个有代表性的具身智能数据集，覆盖真实采集、跨机器人汇总、RGB-D / 力 / 触觉、桌面操作、仿真基准与数据生成。统计以官方主页、仓库与论文为准。
+> 51 个有代表性的具身智能数据集，覆盖真实采集、跨机器人汇总、RGB-D / 力 / 触觉、桌面操作、仿真基准与数据生成。统计以官方主页、仓库与论文为准。
 
 ---
 
@@ -51,9 +51,14 @@
 | [ARCTIC](#ds-arctic) | 铰接物体手物交互数据集 | 真实采集 | 210 万帧 / 339 序列 / 11 个铰接物体 | RGB 双视角 + 3D 手/物网格 + 接触标注 | [官方主页](https://arctic.is.tue.mpg.de/) |
 | [GigaHands](#ds-gigahands) | 大规模多视角手部操作数据集 | 真实采集 | 34 小时 / 14k 片段 / 183M 帧 | 多视角 RGB + 3D 手/物姿态 + 文本 | [官方主页](https://ivl.cs.brown.edu/research/gigahands.html) |
 | [EgoDex](#ds-egodex) | Apple 自我中心桌面操作数据集 | 真实采集 | 829 小时 / 338k 演示 / 194 类任务 | 1080p RGB + 3D 手部骨骼 + 语言 | [官方主页](https://github.com/apple/ml-egodex) |
-| [DexCap 数据集](#ds-dexcap) | 便携手部捕捉灵巧操作数据 | 真实采集 | 6 个灵巧操作任务评测 | 3D 点云 + 手部 mocap | [官方主页](https://dex-cap.github.io/) |
-| [HumanPlus 数据集](#ds-humanplus-data) | 人形影子跟随全身数据 | 真实采集 | 40 小时人体运动 / 每任务最多 40 演示 | RGB 自我中心 + 全身关节 | [官方主页](https://humanoid-ai.github.io/) |
+| [DexCap](#ds-dexcap) | 便携手部捕捉灵巧操作数据 | 真实采集 | 6 个灵巧操作任务评测 | 3D 点云 + 手部 mocap | [官方主页](https://dex-cap.github.io/) |
+| [HumanPlus](#ds-humanplus-data) | 人形影子跟随全身数据 | 真实采集 | 40 小时人体运动 / 每任务最多 40 演示 | RGB 自我中心 + 全身关节 | [官方主页](https://humanoid-ai.github.io/) |
 | [LeRobot Community Datasets](#ds-lerobot-data) | Hugging Face 社区机器人数据集合 | 真实采集 | 约 189 个数据集（持续增长） | 多相机 RGB + 状态/动作 + 语言 | [官方主页](https://huggingface.co/lerobot) |
+| [ABC-130K](#ds-abc-130k) | 迄今最大开源双臂遥操作数据集 | 真实采集 | 134,806 条轨迹 / 3,553 小时 | 3 路 RGB + 本体状态/动作 | [官方主页](https://abc.bot/) |
+| [TableVerse-100K](#ds-tableverse-100k) | Real2Sim 物理一致桌面场景生成 | 仿真生成 | 10 万场景 / 100 万物体实例 | 合成多视图 RGB + 网格 | [官方主页](https://bytedance.github.io/TableVerse/) |
+| [DexCanvas](#ds-dexcanvas) | 人手灵巧操作 + 逐帧接触力 | 真实采集 + 仿真扩增 | 70 小时种子 / 计划 7,000 小时 | 多视角 RGB-D + MANO + 力觉 | [官方主页](https://dexcanvas.github.io/) |
+| [Humanoid Everyday](#ds-humanoideveryday) | 开放世界人形整机操作 | 真实采集 | 10.3k 轨迹 / 260 任务 | RGB + 深度 + 触觉 + 语言 | [官方主页](https://humanoideveryday.github.io/) |
+| [VTDexManip](#ds-vtdexmanip) | 人类触觉数据 + 灵巧操作基准 | 真实采集 + 仿真 | 565k 帧 / 2,032 序列 | RGB + 指尖压阻触觉 | [官方主页](https://lqts.github.io/VTDexManip/) |
 
 ---
 
@@ -1180,7 +1185,7 @@
 
 ---
 
-### DexCap 数据集
+### DexCap
 
 <a id="ds-dexcap"></a>
 
@@ -1189,7 +1194,7 @@
 <a id="dexcap-sample"></a>
 
 <div align="center">
-  <img src="datasets-img/dexcap-sample-01.png" alt="DexCap 数据集" height="520">
+  <img src="datasets-img/dexcap-sample-01.png" alt="DexCap" height="520">
 </div>
 
 <table style="width:100%;table-layout:fixed" width="100%">
@@ -1206,7 +1211,7 @@
 
 ---
 
-### HumanPlus 数据集
+### HumanPlus
 
 <a id="ds-humanplus-data"></a>
 
@@ -1215,7 +1220,7 @@
 <a id="humanplus-data-sample"></a>
 
 <div align="center">
-  <img src="datasets-img/humanplus-data-sample-01.png" alt="HumanPlus 数据集" height="520">
+  <img src="datasets-img/humanplus-data-sample-01.png" alt="HumanPlus" height="520">
 </div>
 
 <table style="width:100%;table-layout:fixed" width="100%">
@@ -1256,3 +1261,132 @@
 </tbody>
 </table>
 
+---
+
+### ABC-130K
+
+<a id="ds-abc-130k"></a>
+
+[官方主页](https://abc.bot/) · [论文](https://arxiv.org/abs/2606.27375)
+
+<a id="abc-130k-sample"></a>
+
+<div align="center">
+  <img src="datasets-img/abc-130k-sample-01.jpg" alt="ABC-130K" height="520">
+</div>
+
+<table style="width:100%;table-layout:fixed" width="100%">
+<tbody>
+<tr><td rowspan="4" style="width:130px;min-width:130px;max-width:130px" width="130">基本介绍</td><td style="width:130px;min-width:130px;max-width:130px" width="130">Dataset Visualizer</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620">[项目主页](https://abc.bot/) — 提供任务视频、数据统计、硬件与训练/评测开源方案。</td></tr>
+<tr><td style="width:130px;min-width:130px;max-width:130px" width="130">来源机构</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620">UC Berkeley / MIT / Amazon FAR / XDOF / CMU</td></tr>
+<tr><td style="width:130px;min-width:130px;max-width:130px" width="130">关注建议</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620">迄今最大开源双臂遥操作数据集，134K 条轨迹覆盖 195 个任务，配套 GELLO 式硬件、训练代码与评测 rubric，适合双臂行为克隆规模化研究。</td></tr>
+<tr><td style="width:130px;min-width:130px;max-width:130px" width="130">数据使用</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620"><ul><li><strong>下载</strong>：HuggingFace XDOF/ABC-130k（gated）</li><li><strong>代码</strong>：github.com/amazon-far/abc（开源）</li></ul></td></tr>
+<tr><td rowspan="3" style="width:130px;min-width:130px;max-width:130px" width="130">数据设计</td><td style="width:130px;min-width:130px;max-width:130px" width="130">收集方式</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620">GELLO 式无源主臂遥操作双 6-DoF YAM 平台；另有 400 小时仿真遥操作数据</td></tr>
+<tr><td style="width:130px;min-width:130px;max-width:130px" width="130">体量分布</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620">134,806 条 episode / 195 个任务 / 3,553 小时真实数据；20 个仿真任务 400 小时</td></tr>
+<tr><td style="width:130px;min-width:130px;max-width:130px" width="130">数据维度</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620"><ul><li><strong>视觉</strong>：3 路 RGB（顶部 + 双腕，224×224 堆叠 MP4）</li><li><strong>本体感觉</strong>：14 维状态/动作</li><li><strong>标注</strong>：任务 / 子任务标签</li></ul></td></tr>
+</tbody>
+</table>
+
+---
+
+### TableVerse-100K
+
+<a id="ds-tableverse-100k"></a>
+
+[官方主页](https://bytedance.github.io/TableVerse/) · [论文](https://arxiv.org/abs/2607.21017)
+
+<a id="tableverse-100k-sample"></a>
+
+<div align="center">
+  <img src="datasets-img/tableverse-100k-sample-01.png" alt="TableVerse-100K" height="520">
+</div>
+
+<table style="width:100%;table-layout:fixed" width="100%">
+<tbody>
+<tr><td rowspan="4" style="width:130px;min-width:130px;max-width:130px" width="130">基本介绍</td><td style="width:130px;min-width:130px;max-width:130px" width="130">Dataset Visualizer</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620">[项目主页](https://bytedance.github.io/TableVerse/) — 提供管线图、类别分布与任务生成展示。</td></tr>
+<tr><td style="width:130px;min-width:130px;max-width:130px" width="130">来源机构</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620">字节跳动（ByteDance）</td></tr>
+<tr><td style="width:130px;min-width:130px;max-width:130px" width="130">关注建议</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620">以真实网络图片经确定性 Real2Sim 重建生成 10 万物理一致桌面场景，与"文本幻觉布局"路线形成对照，适合桌面操作仿真预训练。</td></tr>
+<tr><td style="width:130px;min-width:130px;max-width:130px" width="130">数据使用</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620"><ul><li><strong>下载</strong>：数据集入口见项目页</li><li><strong>代码</strong>：github.com/bytedance/TableVerse（Apache-2.0）</li></ul></td></tr>
+<tr><td rowspan="3" style="width:130px;min-width:130px;max-width:130px" width="130">数据设计</td><td style="width:130px;min-width:130px;max-width:130px" width="130">收集方式</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620">真实网络图片 → 确定性 Real2Sim 物理重建与稳定化 → 自动生成无碰撞 pick-and-place 轨迹</td></tr>
+<tr><td style="width:130px;min-width:130px;max-width:130px" width="130">体量分布</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620">100,000 个物理一致桌面场景；约 100 万物体实例、35K+ 语义类别；7 类场景主题</td></tr>
+<tr><td style="width:130px;min-width:130px;max-width:130px" width="130">数据维度</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620"><ul><li><strong>视觉</strong>：合成多视图 RGB（前端 / 俯视）</li><li><strong>几何</strong>：物理稳定网格资产</li><li><strong>动作与控制</strong>：无碰撞专家轨迹</li></ul></td></tr>
+</tbody>
+</table>
+
+---
+
+### DexCanvas
+
+<a id="ds-dexcanvas"></a>
+
+[官方主页](https://dexcanvas.github.io/) · [论文](https://arxiv.org/abs/2510.15786)
+
+<a id="dexcanvas-sample"></a>
+
+<div align="center">
+  <img src="datasets-img/dexcanvas-sample-01.png" alt="DexCanvas" height="520">
+</div>
+
+<table style="width:100%;table-layout:fixed" width="100%">
+<tbody>
+<tr><td rowspan="4" style="width:130px;min-width:130px;max-width:130px" width="130">基本介绍</td><td style="width:130px;min-width:130px;max-width:130px" width="130">Dataset Visualizer</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620">[项目主页](https://dexcanvas.github.io/) — 展示动捕与 RL 重建数据样例。</td></tr>
+<tr><td style="width:130px;min-width:130px;max-width:130px" width="130">来源机构</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620">DexRobot 灵巧智能（与密歇根大学、上海交大等合著）</td></tr>
+<tr><td style="width:130px;min-width:130px;max-width:130px" width="130">关注建议</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620">人手灵巧操作数据，首次在规模上配备物理一致的逐帧接触力；按 Cutkosky 分类法覆盖 21 类操作，适合人手灵巧技能与接触模型研究。</td></tr>
+<tr><td style="width:130px;min-width:130px;max-width:130px" width="130">数据使用</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620"><ul><li><strong>下载</strong>：HuggingFace DEXROBOT/DexCanvas（v0.1，ODbL）</li><li><strong>代码</strong>：github.com/dexrobot/dexcanvas</li></ul></td></tr>
+<tr><td rowspan="3" style="width:130px;min-width:130px;max-width:130px" width="130">数据设计</td><td style="width:130px;min-width:130px;max-width:130px" width="130">收集方式</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620">真实光学动捕 + RL real-to-sim 物理仿真扩增（×100）</td></tr>
+<tr><td style="width:130px;min-width:130px;max-width:130px" width="130">体量分布</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620">v0.1 test 版约 70 小时 / 3000 万帧；完整版计划 7,000 小时（70h 种子 ×100），30 个物体</td></tr>
+<tr><td style="width:130px;min-width:130px;max-width:130px" width="130">数据维度</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620"><ul><li><strong>视觉</strong>：多视角 RGB-D</li><li><strong>姿态</strong>：MANO 手参数 + 6-DoF 物体位姿</li><li><strong>力觉</strong>：逐帧接触点与力 / 力矩</li></ul></td></tr>
+</tbody>
+</table>
+
+---
+
+### Humanoid Everyday
+
+<a id="ds-humanoideveryday"></a>
+
+[官方主页](https://humanoideveryday.github.io/) · [论文](https://arxiv.org/abs/2510.08807)
+
+<a id="humanoideveryday-sample"></a>
+
+<div align="center">
+  <img src="datasets-img/humanoideveryday-sample-01.jpg" alt="Humanoid Everyday" height="520">
+</div>
+
+<table style="width:100%;table-layout:fixed" width="100%">
+<tbody>
+<tr><td rowspan="4" style="width:130px;min-width:130px;max-width:130px" width="130">基本介绍</td><td style="width:130px;min-width:130px;max-width:130px" width="130">Dataset Visualizer</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620">[项目主页](https://humanoideveryday.github.io/) — 提供任务概览与演示动图。</td></tr>
+<tr><td style="width:130px;min-width:130px;max-width:130px" width="130">来源机构</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620">南加州大学（USC）+ 丰田研究院（TRI）</td></tr>
+<tr><td style="width:130px;min-width:130px;max-width:130px" width="130">关注建议</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620">面向开放世界的人形整机操作数据集，覆盖移动操作、变形物体、工具使用与人机交互等 7 大类任务，聚焦整机全身操作。</td></tr>
+<tr><td style="width:130px;min-width:130px;max-width:130px" width="130">数据使用</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620"><ul><li><strong>下载</strong>：官网暂未开放下载（2026-09 状态，数据入口待跟进）</li></ul></td></tr>
+<tr><td rowspan="3" style="width:130px;min-width:130px;max-width:130px" width="130">数据设计</td><td style="width:130px;min-width:130px;max-width:130px" width="130">收集方式</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620">人工监督遥操作的真实世界采集</td></tr>
+<tr><td style="width:130px;min-width:130px;max-width:130px" width="130">体量分布</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620">10.3k 条轨迹 / 260 个任务 / 7 大类 / 300 万+ 帧 @30Hz</td></tr>
+<tr><td style="width:130px;min-width:130px;max-width:130px" width="130">数据维度</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620"><ul><li><strong>视觉</strong>：RGB + 深度 + LiDAR</li><li><strong>力觉</strong>：触觉</li><li><strong>标注</strong>：自然语言任务描述</li></ul></td></tr>
+</tbody>
+</table>
+
+---
+
+### VTDexManip
+
+<a id="ds-vtdexmanip"></a>
+
+[官方主页](https://lqts.github.io/VTDexManip/) · [论文](https://openreview.net/forum?id=jf7C7EGw21)
+
+<a id="vtdexmanip-sample"></a>
+
+<div align="center">
+  <img src="datasets-img/vtdexmanip-sample-01.jpg" alt="VTDexManip" height="520">
+</div>
+
+<table style="width:100%;table-layout:fixed" width="100%">
+<tbody>
+<tr><td rowspan="4" style="width:130px;min-width:130px;max-width:130px" width="130">基本介绍</td><td style="width:130px;min-width:130px;max-width:130px" width="130">Dataset Visualizer</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620">[项目主页](https://lqts.github.io/VTDexManip/) — 提供数据集与基准概览。</td></tr>
+<tr><td style="width:130px;min-width:130px;max-width:130px" width="130">来源机构</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620">浙江大学</td></tr>
+<tr><td style="width:130px;min-width:130px;max-width:130px" width="130">关注建议</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620">人类触觉数据（20 路压阻触觉手套采集）+ 配套 Shadow Hand 灵巧操作 RL 基准（6 任务、18 种方法），支持视觉-触觉联合预训练与 sim-to-real 验证。</td></tr>
+<tr><td style="width:130px;min-width:130px;max-width:130px" width="130">数据使用</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620"><ul><li><strong>下载</strong>：OneDrive（密码 vtdexmanip）</li><li><strong>代码</strong>：github.com/LQTS/VTDexManip（开源）</li></ul></td></tr>
+<tr><td rowspan="3" style="width:130px;min-width:130px;max-width:130px" width="130">数据设计</td><td style="width:130px;min-width:130px;max-width:130px" width="130">收集方式</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620">人手演示（压阻触觉手套）+ Isaac Gym 中 Shadow Hand 仿真基准</td></tr>
+<tr><td style="width:130px;min-width:130px;max-width:130px" width="130">体量分布</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620">565k 帧 / 2,032 条序列 / 5 名受试 / 10 个日常任务 / 182 个物体</td></tr>
+<tr><td style="width:130px;min-width:130px;max-width:130px" width="130">数据维度</td><td style="word-wrap:break-word;width:620px;min-width:620px;max-width:620px" width="620"><ul><li><strong>视觉</strong>：RGB</li><li><strong>触觉</strong>：指尖压阻（二值化后对仿真噪声鲁棒）</li><li><strong>姿态</strong>：抓取姿态</li></ul></td></tr>
+</tbody>
+</table>
